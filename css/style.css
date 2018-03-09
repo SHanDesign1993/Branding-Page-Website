@@ -1,0 +1,1544 @@
+/*  =============================================================================
+	=============================================================================
+	=============================================================================
+	摰Ｚˊ��� CSS 閮剛��
+	=============================================================================
+	=============================================================================
+	=============================================================================
+	========================================================================== */
+/* =============================================================================
+   �抅�𧋦閮剖��
+   ========================================================================== */
+   body {
+	background-color: #fff;
+	-webkit-text-size-adjust: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+body,
+html{
+	width: 100%;
+	overflow-x: hidden;
+}
+
+
+@font-face {
+	font-family: 'Noto Sans TC';
+	font-style: normal;
+	font-weight: 200;
+	src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.woff2) format('woff2'),
+		 url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.woff) format('woff'),
+		 url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.otf) format('opentype');
+}
+@font-face {
+	font-family: 'Noto Sans TC';
+	font-style: normal;
+	font-weight: 300;
+	src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff2) format('woff2'),
+		 url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff) format('woff'),
+		 url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.otf) format('opentype');
+}
+@font-face {
+	font-family: 'Noto Sans TC';
+	font-style: normal;
+	font-weight: 400;
+	src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff2) format('woff2'),
+		 url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff) format('woff'),
+		 url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.otf) format('opentype');
+}
+@font-face {
+	font-family: 'Noto Sans TC';
+	font-style: normal;
+	font-weight: 500;
+	src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.woff2) format('woff2'),
+		 url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.woff) format('woff'),
+		 url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.otf) format('opentype');
+}
+@font-face {
+	font-family: 'Noto Sans TC';
+	font-style: normal;
+	font-weight: bold;
+	src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.woff2) format('woff2'),
+		 url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.woff) format('woff'),
+		 url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.otf) format('opentype');
+}
+@font-face {
+	font-family: 'Noto Sans TC';
+	font-style: normal;
+	font-weight: 900;
+	src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.woff2) format('woff2'),
+		 url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.woff) format('woff'),
+		 url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.otf) format('opentype');
+}
+
+@font-face {
+	font-family: MyCustomFont;
+	src: local(Heiti TC), local("敺株��迤暺煾��"),local(LiSong Pro Light),local("�瑕�� Pro"),local(SimSun),local("摰钅��");
+	/* no unicode-range; default to all characters */
+}
+
+/* Latin characters 撠�鍂 */
+@font-face {
+	font-family: MyCustomFont; /* ��峕見�� font-family */
+	unicode-range: U+00-024F;  /* Latin, Latin1 Sup., Ext-A, Ext-B */
+	src: local(Helvetica Neue),     /* OS X preferred */
+	   local(Helvetica),         /* Other OS */
+	   local(Arial);         /* Other OS */
+}
+
+/* 瘜券𨺗蝚西�笔��鍂 */
+@font-face {
+	font-family: MyCustomFont;      /* ��峕見�� font-family */
+	unicode-range: U+3100-312F;     /* Bopomofo */
+	src: local(Heiti TC), local("敺株��迤暺煾��"),local("�琿�� Pro"),local(LiSong Pro Light),local("�瑕�� Pro"),local(SimSun),local("摰钅��");
+}
+
+/* �𠯫������滚��鍂 */
+@font-face {
+	font-family: MyCustomFont;            /* ��峕見�� font-family */
+	unicode-range: U+3040-30FF;           /* Hiragana, Katakana */
+	src: local(Hiragino Kaku Gothic Pro), /* OS X */
+	   local(Meiryo);                   /* Windows Vista+ */
+}
+
+p{
+	font-family: 'Lato', 'Noto Sans TC', Noto Sans CJK TC, "sourcehansans-tc", MyCustomFont,"敺株��迤暺煾��", sans-serif;
+	letter-spacing: 1px;
+	font-size: 15px;
+	line-height: 1.8em;
+	color: #666;
+}
+
+h1,h2,h3,h4,h5,h6,label,span,a,li,div,input,entry-content,button,#button_crop_recortar{
+	font-family: 'Lato', 'Noto Sans TC', Noto Sans CJK TC, "sourcehansans-tc", MyCustomFont,"敺株��迤暺煾��", sans-serif;
+	text-shadow: none;
+	font-weight: 300;
+	color: #000;
+}
+
+.lang-en h1,.lang-en h2,.lang-en h3,.lang-en h4,.lang-en h5,.lang-en h6,.lang-en label,.lang-en span:not(.dashicons),.lang-en a,.lang-en li,.lang-en div,.lang-en input,.lang-en entry-content,.lang-en button,.lang-en #button_crop_recortar, .lang-en p{
+	font-family: 'Lato', 'Noto Sans TC', Noto Sans CJK TC, 'Noto Sans CJK TC', MyCustomFont,"敺株��迤暺煾��", sans-serif;
+}
+
+.en{
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+}
+
+.en.bold{
+	font-weight: 700;
+}
+
+.en.heavy{
+	font-weight: 900;
+}
+
+h1,h2,h3,h4,h5,h6{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	line-height: 0px;
+}
+
+
+.img_full_responsive{
+	display: block;
+	max-width: none;
+	width: 100%;
+	height: auto;
+}
+
+body{
+	margin: 0px;
+	width: 100%;
+	overflow-x: hidden;
+	box-sizing: border-box;
+}
+
+.main > *:not(.footer_section):last-child{
+	padding-bottom: 48px;
+	width: 100%;
+	float: left;
+}
+
+::selection{
+	background-color: #BBC0C8;
+	color: white;
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    width: 1000px;
+	box-sizing: border-box;
+}
+
+.header_container {
+    position: relative;
+    margin: 0 auto;
+    width: 1000px;
+	box-sizing: border-box;
+}
+
+img{
+	border-style:none;
+}
+
+a,
+form{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+}
+
+@media (max-width: 1100px) {
+	.container{
+		width: 992px;
+	}
+}
+
+@media (max-width: 992px) {
+	.container {
+		width: 750px;
+	}
+	.header_container{
+		width: 750px;
+	}
+
+	body:after{
+		display: none;
+	}
+}
+@media (max-width: 768px) {
+	
+	.container {
+		width: 100%;
+		padding-left: 16px;
+		padding-right: 16px;
+		box-sizing: border-box;
+	}
+	.header_container{
+		width: 100%;
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+	.container.without_padding_in_mobile{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.has_padding_in_mobile{
+		width: 100%;
+		padding-left: 16px;
+		padding-right: 16px;
+		box-sizing: border-box;
+	}
+}
+
+@media (max-width: 600px) {
+	.main > *:not(.footer_section):last-child{
+		padding-bottom: 16px;
+	}
+}
+
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.h100p{
+	height: 100%;
+}
+
+.w100p{
+	width: 100%;
+}
+
+.w50p{
+	width: 50%;
+}
+
+.section{
+	width: 100%;
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+
+
+ul.no_style{
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+ul.no_style li{
+	padding-left: 0px;
+}
+
+ul.underline_style li{
+	border-bottom: 1px solid #c0c1c1;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100%;
+	float: left;
+}
+
+ul.underline_style.underline_padding_in_a li{
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+ul.underline_style.underline_padding_in_a li a{
+	padding-top: 8px;
+	padding-bottom: 10px;
+}
+
+ul.dot_list{
+	list-style: disc;
+	margin: 0px;
+}
+
+ul.dot_list > li{
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+ul.dot_list > li:first-child{
+	padding-top: 0px;
+}
+
+ul.dot_list > li:last-child{
+	padding-bottom: 0px;
+}
+
+ul.list_padding_5 > li{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+@media (max-width: 420px) {
+	ul.dot_list{
+		padding-left: 20px;
+	}
+}
+
+.icon{
+	background-repeat: no-repeat;
+	display: block;
+}
+
+.hide{
+	display: none;
+}
+
+.hide_text{
+	text-indent: -99999px;
+}
+
+.link_for_block{
+	display: block;
+}
+
+input {
+    -webkit-appearance: none;
+}
+
+input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	color:#898989;
+	opacity:1;
+	font-size: 18px;
+	line-height: 18px;
+	font-family: 'Lato', 'Noto Sans TC', Noto Sans CJK TC, 'Noto Sans CJK TC', MyCustomFont,"敺株��迤暺煾��", sans-serif;
+	text-shadow: none;
+	letter-spacing: 0.1em;
+}
+
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color:#898989;
+	opacity:1;
+	font-size: 18px;
+	line-height: 18px;
+	font-family: 'Lato', 'Noto Sans TC', Noto Sans CJK TC, 'Noto Sans CJK TC', MyCustomFont,"敺株��迤暺煾��", sans-serif;
+	text-shadow: none;
+	letter-spacing: 0.1em;
+}
+
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color:#898989;
+	opacity:1;
+	font-size: 18px;
+	line-height: 18px;
+	font-family: 'Lato', 'Noto Sans TC', Noto Sans CJK TC, 'Noto Sans CJK TC', MyCustomFont,"敺株��迤暺煾��", sans-serif;
+	text-shadow: none;
+	letter-spacing: 0.1em;
+}
+
+input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color:#898989;
+	opacity:1;
+	font-size: 18px;
+	line-height: 18px;
+	font-family: 'Lato', 'Noto Sans TC', Noto Sans CJK TC, 'Noto Sans CJK TC', MyCustomFont,"敺株��迤暺煾��", sans-serif;
+	text-shadow: none;
+	letter-spacing: 0.1em;
+}
+
+
+textarea::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	color:#898989;
+	opacity:1;
+	font-size: 18px;
+	line-height: 18px;
+	font-family: 'Lato', 'Noto Sans TC', Noto Sans CJK TC, 'Noto Sans CJK TC', MyCustomFont,"敺株��迤暺煾��", sans-serif;
+	text-shadow: none;
+	letter-spacing: 0.1em;
+}
+
+textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color:#898989;
+	opacity:1;
+	font-size: 18px;
+	line-height: 18px;
+	font-family: 'Lato', 'Noto Sans TC', Noto Sans CJK TC, 'Noto Sans CJK TC', MyCustomFont,"敺株��迤暺煾��", sans-serif;
+	text-shadow: none;
+	letter-spacing: 0.1em;
+}
+
+textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color:#898989;
+	opacity:1;
+	font-size: 18px;
+	line-height: 18px;
+	font-family: 'Lato', 'Noto Sans TC', Noto Sans CJK TC, 'Noto Sans CJK TC', MyCustomFont,"敺株��迤暺煾��", sans-serif;
+	text-shadow: none;
+	letter-spacing: 0.1em;
+}
+
+textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color:#898989;
+	opacity:1;
+	font-size: 18px;
+	line-height: 18px;
+	font-family: 'Lato', 'Noto Sans TC', Noto Sans CJK TC, 'Noto Sans CJK TC', MyCustomFont,"敺株��迤暺煾��", sans-serif;
+	text-shadow: none;
+	letter-spacing: 0.1em;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+input.text_input{
+	font-size: 13px;
+	padding: 0px 0px 0px 14px;
+	color: #646464;
+	background-color: #f3f3f3;
+	border: 1px solid #fff;
+	border-radius: 0px;
+	transition: 400ms border ease, 400ms background-color ease;
+}
+
+input.text_input.input_style{
+	font-size: 13px;
+	padding: 10px 14px 10px 14px;
+	border-radius: 5px;
+	border: 1px solid #666;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+
+input.text_input:focus,
+textarea.text_input:focus {
+ 	border: 1px solid #838383;
+ 	background-color: #f8f8f8;
+}
+
+input.text_input.input_style:focus{
+	border: 1px solid #95000d;
+}
+
+input.text_input:hover,
+textarea.text_input:hover {
+ 	background-color: #f8f8f8;
+}
+
+input.text_input.input_style:hover{
+	border: 1px solid #dd0012;
+}
+
+input.text_button{
+	cursor: pointer;
+	display: block;
+	background-color: #f3f3f3;
+	border: 1px solid #fff;
+	border-radius: 0px;
+	transition: 400ms background-color ease;
+}
+
+input.text_button.icon{
+	text-indent: -9999px;
+}
+
+input.text_button:hover,
+input.text_button:focus{
+ 	background-color: #d6d6d6;
+}
+
+input.text_button:active{
+ 	background-color: #b9b9b9;
+}
+
+input.file_input{
+	position: relative;
+	cursor: pointer;
+	margin-left: -1px;
+}
+
+input.file_input[type="file"]::-webkit-file-upload-button{
+	cursor: pointer;
+	display: block;
+	background-color: #666;
+	border: 1px solid #fff;
+	border-radius: 0px;
+	transition: 400ms background-color ease;
+	text-indent: -9999px;
+	position: relative;
+	width: 95px;
+	padding: 10px 15px;
+	border-radius: 5px;
+    -webkit-appearance: none;
+}
+
+input.file_input:before{
+	content: "隢钅�豢���娍��";
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	color: #fff;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	padding: 10px 15px;
+	line-height: 15px;
+	font-size: 13px;
+}
+
+input.file_input:hover[type="file"]::-webkit-file-upload-button{
+ 	background-color: #dd0012;
+}
+
+input.file_input:active[type="file"]::-webkit-file-upload-button{
+ 	background-color: #95000d;
+}
+
+input.submit_style{
+	cursor: pointer;
+	display: block;
+	background-color: #dd0012;
+	border: 1px solid #fff;
+	padding: 5px 28px 5px 28px;
+	border-radius: 0px;
+	border-radius: 5px;
+	margin-top: 10px;
+	transition: 400ms all ease;
+}
+
+input.submit_style:hover{
+	background-color: #95000d;
+	transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05) rotate(0.02deg);
+    -ms-transform: scale(1.05) rotate(0.02deg);
+}
+
+input.submit_style:active{
+	transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9) rotate(0.02deg);
+    -ms-transform: scale(0.9) rotate(0.02deg);
+}
+
+textarea.text_input.input_style{
+	font-size: 13px;
+	padding: 10px 14px 10px 14px;
+	border-radius: 5px;
+	min-height: 43px;
+	border: 1px solid #666;
+	box-sizing: border-box;
+	transition: 400ms border ease, 400ms background-color ease;
+}
+
+textarea.text_input.input_style:hover{
+	border: 1px solid #dd0012;
+}
+
+textarea.text_input.input_style:focus{
+	border: 1px solid #95000d;
+}
+
+.input_style .nice-select{
+	border: 1px solid #666;
+}
+
+@media (max-width: 992px) {
+	.mobile_type.earier_change input::-webkit-input-placeholder{
+		font-size: 16px;
+	}
+	.mobile_type.earier_change input:-moz-placeholder{
+		font-size: 16px;
+	}
+	.mobile_type.earier_change input::-moz-placeholder{
+		font-size: 16px;
+	}
+	.mobile_type.earier_change input:-ms-input-placeholder {
+		font-size: 16px;
+	}
+	
+	.mobile_type.earier_change input.text_input {
+	 	border: 0px;
+	 	margin-top: 1px;
+	 	margin-right: 1px;
+	}
+	
+	.mobile_type.earier_change input.text_input:focus {
+	 	border: 0px;
+	}
+	
+}
+
+@media (max-width: 768px) {
+	input::-webkit-input-placeholder{
+		font-size: 14px;
+		line-height: 14px;
+	}
+	input:-moz-placeholder{
+		font-size: 14px;
+		line-height: 14px;
+	}
+	input::-moz-placeholder{
+		font-size: 14px;
+		line-height: 14px;
+	}
+	input:-ms-input-placeholder {
+		font-size: 14px;
+		line-height: 14px;
+	}
+	textarea::-webkit-input-placeholder{
+		font-size: 14px;
+		line-height: 14px;
+	}
+	textarea:-moz-placeholder{
+		font-size: 14px;
+		line-height: 14px;
+	}
+	textarea::-moz-placeholder{
+		font-size: 14px;
+		line-height: 14px;
+	}
+	textarea:-ms-input-placeholder {
+		font-size: 14px;
+		line-height: 14px;
+	}
+	
+	
+	input.text_input {
+	 	border: 0px;
+	 	margin-top: 1px;
+	 	margin-right: 1px;
+	}
+	
+	input.text_input:focus {
+	 	border: 0px;
+	}
+	
+	input.submit_style{
+		width: 100%;
+		padding: 10px 28px 10px 28px;
+	}
+	
+	input.submit_style:hover,
+	input.submit_style:active{
+		transform: scale(1);
+	    -webkit-transform: scale(1);
+	    -moz-transform: scale(1) rotate(0.02deg);
+	    -ms-transform: scale(1) rotate(0.02deg);
+	}
+}
+
+.b_bg{
+	background-color: #000;
+}
+
+.d_bg{
+	background-color: #222;
+}
+
+.w_bg{
+	background-color: #fff;
+}
+
+.lbg_bg{
+	background-color: #BBC0C8;
+}
+
+.mbg_bg{
+	background-color: #425876;
+}
+
+.lgy_bg{
+	background-color: #fafafa;
+}
+
+.lmgy_bg{
+	background-color: #f5f5f5;
+}
+
+.mgy_bg{
+	background-color: #eeefef;
+}
+
+.dgy_bg{
+	background-color: #444;
+}
+
+.o_b_bg{
+	background-color: #231815;
+	opacity: 0.92;
+}
+
+.lgy_wd{
+	color: #fafafa;
+}
+
+.mlgy_wd{
+	color: #c0c1c1;
+}
+
+.mmlgy_wd{
+	color: #969797;
+}
+
+.mgy_wd{
+	color: #727171;
+}
+
+.mdgy_wd{
+	color: #666;
+}
+
+.dgy_wd{
+	color: #444;
+}
+
+.b_wd{
+	color: #000;
+}
+
+.w_wd{
+	color: #fff;
+}
+
+.w_wd *{
+	color: #fff;
+}
+
+.bl_wd{
+	color: #009991;
+}
+
+.y_wd{
+	color: #ea8f00;
+}
+
+.r_wd{
+	color: #dd0012;
+}
+
+.ws_28{
+	font-size: 28px;
+}
+
+.ws_24{
+	font-size: 24px;
+}
+
+.ws_21{
+	font-size: 21px;
+}
+
+.ws_18{
+	font-size: 18px;
+}
+
+.ws_16{
+	font-size: 16px;
+}
+
+.ws_15{
+	font-size: 15px;
+}
+
+.ws_14{
+	font-size: 14px;
+}
+
+.ws_13{
+	font-size: 13px;
+}
+
+.ws_12{
+	font-size: 12px;
+}
+
+.ws_10{
+	font-size: 10px;
+	 -webkit-text-size-adjust : none;
+}
+
+.wst_light{
+	font-weight: light;
+}
+
+@media (max-width: 768px) {
+	.ws_28{
+		font-size: 18px;
+	}
+}
+
+.wa_justify{
+	text-align: justify;
+	text-justify: inter-ideograph;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+.wa_center{
+	text-align: center;
+	display: inline-block;
+}
+
+.wa_left{
+	text-align: left;
+}
+
+.wa_right{
+	text-align: right;
+}
+
+img.ob_fit{
+	width: 100%;
+	height: 100%;
+}
+
+.ob_fit.ob_fit_cover{
+	object-fit:cover;
+}
+
+.ob_fit.ob_fit_cotain{
+	object-fit:contain;
+}
+
+.ob_fit.ob_po_center{
+	object-position:center center;
+}
+
+.bg_fit.bg_fit_cover{
+	background-size: cover;
+}
+
+.bg_fit.bg_fit_cotain{
+	background-size: contain;
+}
+
+.bg_fit.bg_po_center{
+	background-position: center center;
+}
+
+figure{
+	padding: 0px;
+	margin: 0px;
+}
+
+.dis_drag{
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-user-drag: none;
+	user-drag: none;
+}
+
+label{
+	text-shadow: none;
+}
+ 
+a *{
+	cursor: pointer;
+}
+
+a.no_style{
+	text-decoration: none;
+}
+
+a.hover_link,
+a.hover_link *{
+	transition: 400ms color ease, 400ms opacity ease;
+}
+ 
+ .no_cursor,
+.no_cursor *{
+	cursor: default;
+}
+
+a.link_btn{
+	width: 167px;
+	height: 47px;
+	border-radius: 47px;
+	font-size: 14px;
+	color: #333333;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	text-decoration: none;
+	box-sizing: border-box;
+	border: 1px solid #000;
+	position: relative;
+	overflow: hidden;
+	transition:400ms all ease;
+}
+
+a.link_btn:after{
+	background-color: #fff;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	content: "";
+	z-index: -3;
+	left: 0px;
+	top: 0px;
+}
+
+a.link_btn span{
+	width: 100%;
+	height: 100%;
+	color: #333333;
+	position: relative;
+	padding-top: 12px;
+	float: left;
+	display: block;
+	transition:400ms all ease;
+}
+
+a.link_btn span:before{
+	background-color: #666;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	content: "";
+	z-index: -2;
+	left: 0px;
+	top: 0px;
+	width: 0px;
+	transition:400ms all ease;
+}
+
+a.link_btn span:after{
+	background-color: #333;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	content: "";
+	z-index: -1;
+	left: 0px;
+	top: 0px;
+	width: 0px;
+	transition-delay: 300ms;
+	transition:600ms all ease;
+}
+
+a.link_btn:hover span:before{
+	width: 120%;
+}
+
+a.link_btn:hover span:after{
+	width: 120%;
+}
+
+a.link_btn:hover span{
+	color: white;
+}
+
+a.link_btn:hover{
+	border: 1px solid #fff;
+}
+
+.split_views{
+	display: table;
+	width: 100%;
+}
+
+.split_views .split_view{
+	display: table-cell;
+	width: 50%;
+	vertical-align: top;
+}
+
+@media (max-width: 768px) {
+	.split_views{
+		display: block;
+	}
+	.split_views .split_view{
+		display: block;
+		width: 100%;
+		vertical-align: top;
+		float: left;
+	}
+}
+
+
+/*--------------------------------------------------------
+----------------------------------------------------------
+��𧢲�毺��𧋦�����
+----------------------------------------------------------
+--------------------------------------------------------*/
+
+.desktop_type {
+    display: block;
+}
+
+.desktop_type_tr {
+    display: table-row;
+}
+
+.display_inline .desktop_type{
+    display: inline-block;
+}
+
+.mobile_type {
+    display: none;
+}
+
+.mobile_type_tr {
+    display: none;
+}
+
+.iPhone7size_display_type{
+	display: none;
+}
+
+@media (max-width: 992px) {
+    .desktop_type.earier_change {
+        display: none;
+    }
+
+    .mobile_type.earier_change {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .desktop_type,
+    .display_inline .normal_type,
+    .desktop_type_tr
+    {
+        display: none;
+    }
+
+    .mobile_type {
+        display: block;
+    }
+    
+    .mobile_type_tr {
+	    display: table-row;
+	}
+    
+    .display_inline .mobile_type {
+	    display: inline-block;
+    }
+}
+
+@media (max-width: 420px) {
+	.hide_for_s_mobile_type{
+		display: none;
+	}
+}
+
+@media (max-width: 380px) {
+	.iPhone7size_display_type{
+		display: block;
+	}
+}
+
+@media (max-width: 320px) {
+	.hide_for_sm_mobile_type{
+		display: none;
+	}
+}
+
+/*--------------------------------------------------------
+----------------------------------------------------------
+鈭鍦�閗身摰�
+----------------------------------------------------------
+--------------------------------------------------------*/
+.disable-link,
+.disable-link *,
+.coming_soon,
+.coming_soon *{
+	cursor: default;
+}
+.action_hover:not(.disable-link){
+	opacity: 1;
+	transition: 250ms ease opacity;
+}
+
+.action_box_hover:not(.disable-link){
+	opacity: 1;
+	transition: 250ms ease opacity;
+}
+
+body:not(.iOS):not(.Android) .action_hover:hover:not(.disable-link){
+	opacity: 0.5;
+}
+
+body:not(.iOS):not(.Android) .action_hover:active:not(.disable-link){
+	opacity: 0.4;
+}
+
+body:not(.iOS):not(.Android) .action_box_hover:hover:not(.disable-link){
+	opacity: 0.7;
+}
+
+body:not(.iOS):not(.Android) .action_box_hover:active:not(.disable-link){
+	opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+	.m_action_disable{
+		-moz-transition: none;
+		-webkit-transition: none;
+		-o-transition: color 0 ease-in;
+		transition: none;
+	}
+
+	.action_hover.m_action_disable{
+		opacity: 1;
+	}
+}
+
+.multi_pics{
+	display: block;
+}
+
+.multi_pics .multi_icon{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.multi_pics .multi_icon:after{
+	content: "";
+	position: absolute;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	z-index: 0;
+	opacity: 1.0;
+	-moz-opacity:1.0;
+	transition: 400ms opacity ease;
+}
+
+.multi_pics .multi_icon:before{
+	content: "";
+	position: absolute;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	z-index: 1;
+	opacity: 0.0;
+	-moz-opacity:0.0;
+	transition: 400ms opacity ease;
+}
+
+.multi_pics:hover .multi_icon:after{
+	opacity: 0;
+}
+.multi_pics_to_active.active .multi_icon:after{
+	opacity: 0;
+}
+
+.multi_pics:hover .multi_icon:before{
+	opacity: 1;
+}
+.multi_pics_to_active.active .multi_icon:before{
+	opacity: 1;
+}
+
+.multi_pics:active .multi_icon:before,
+.multi_pics:focus .multi_icon:before{
+	opacity: 0.6;
+}
+.multi_pics:hover .multi_icon:after{
+	opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+	.multi_pics:active .multi_icon:before{
+		opacity: 1;
+	}
+	.multi_pics:active .multi_icon:after{
+		opacity: 0;
+	}
+	.multi_pics:hover .multi_icon:after{
+		opacity: 0;
+	}
+	.multi_pics:hover .multi_icon:before{
+		opacity: 1;
+	}
+}
+
+
+
+
+
+/*--------------------------------------------------------
+----------------------------------------------------------
+霈���𡝗見撘�
+----------------------------------------------------------
+--------------------------------------------------------*/
+div.ui-loader{
+	display: none;
+}
+#loading{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: #fff;
+	top: 0px;
+	left: 0px;
+	z-index: 999;
+}
+
+.home #loading{
+	background-color: #000;
+}
+
+#loading .loading_wrap{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+#loading .loading_wrap > div{
+	position: absolute;
+	background-color: #BEA666;
+}
+
+#loading .loading_wrap .right_line_1{
+	left: 50%;
+	width: 0%;
+	height: 12px;
+	bottom: 0px;
+	transition: 300ms width ease;
+}
+
+#loading .loading_wrap .right_line_2{
+	right: 0%;
+	width: 12px;
+	height: 0%;
+	bottom: -5%;
+	transition: 300ms height ease;
+}
+
+#loading .loading_wrap .right_line_3{
+	right: -5%;
+	width: 0%;
+	height: 12px;
+	top: 0px;
+	transition: 300ms width ease;
+}
+
+#loading .loading_wrap .left_line_1{
+	right: 50%;
+	width: 0%;
+	height: 12px;
+	bottom: 0px;
+	transition: 300ms width ease;
+}
+
+#loading .loading_wrap .left_line_2{
+	left: 0%;
+	width: 12px;
+	height: 0%;
+	bottom: -5%;
+	transition: 300ms height ease;
+}
+
+#loading .loading_wrap .left_line_3{
+	left: -5%;
+	width: 0%;
+	height: 12px;
+	top: 0px;
+	transition: 300ms width ease;
+}
+
+#loading:after{
+	width: 242px;
+	height: 43px;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -121px;
+	margin-top: -21px;
+	content: '';
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+
+@keyframes drawLineIn {
+	0% {
+		width: 0%;
+		left: 0%;
+	}
+	100% {
+		width: 100%;
+		left: 0%;
+	}
+}
+
+@keyframes drawLineOut {
+	0% {
+		width: 100%;
+		left: 0%;
+	}
+	100% {
+		width: 0%;
+		left: 100%;
+	}
+}
+
+
+@media (max-width: 992px) {
+	#loading:after{
+		zoom: 0.7;
+	}
+}
+
+@media (max-width: 768px) {
+	#loading .loading_wrap .right_line_1,
+	#loading .loading_wrap .right_line_3,
+	#loading .loading_wrap .left_line_1,
+	#loading .loading_wrap .left_line_3{
+		height: 8px;
+	}
+	
+	#loading .loading_wrap .right_line_2,
+	#loading .loading_wrap .left_line_2{
+		width: 8px;
+	}
+}
+
+
+
+
+.section .read_more_button{
+	width: 100%;
+	float: left;
+	margin-top: 48px;
+	transform: translateY(0px);
+	opacity: 1;
+	transition-delay: 300ms;
+	transition: 600ms all cubic-bezier(0.18, 0.43, 0.24, 0.96);
+}
+
+.section .read_more_button .button_wrap{
+	width: 199px;
+	height: 54px;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	border: 1px solid #000;
+	border-radius: 27px;
+	box-sizing: border-box;
+	padding-top: 20px;
+	text-decoration: none;
+	overflow: hidden;
+	transition: 600ms all cubic-bezier(0.18, 0.43, 0.24, 0.96);
+}
+
+.section .read_more_button.wh .button_wrap{
+	border: 1px solid #fff;
+}
+
+.section .read_more_button .button_wrap .text{
+	display: inline-block;
+	font-size: 12px;
+	letter-spacing: 0.1em;
+	line-height: 12px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	vertical-align: top;
+	transition: 400ms all cubic-bezier(0.18, 0.43, 0.24, 0.96);
+}
+
+.section .read_more_button.back_page_button .button_wrap .text{
+	font-size: 18px;
+	font-weight: 400;
+	font-family: 'Noto Sans TC';
+}
+
+.section .read_more_button.wh .button_wrap .text{
+	color: #fff;
+}
+
+.section .read_more_button .button_wrap .arrow{
+	display: inline-block;
+	vertical-align: top;
+	letter-spacing: 0.1em;
+	line-height: 12px;
+	width: 23px;
+	height: 9px;
+	margin-top: -2px;
+	margin-left: 20px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	transition: 400ms all cubic-bezier(0.18, 0.43, 0.24, 0.96);
+}
+
+.section .read_more_button .button_wrap .arrow path{
+	transition: 400ms all cubic-bezier(0.18, 0.43, 0.24, 0.96);
+}
+
+.section .read_more_button.wh .button_wrap .arrow path{
+	fill: #fff;
+}
+
+.section .read_more_button .button_wrap:not(.not_link):hover,
+.section .box a:hover .read_more_button .button_wrap.not_link{
+	background-color: #000;
+}
+
+.section .read_more_button.wh .button_wrap:not(.not_link):hover,
+.section .box a:hover .read_more_button.wh .button_wrap.not_link{
+	background-color: #fff;
+}
+
+.section .read_more_button .button_wrap:not(.not_link):hover .arrow,
+.section .box a:hover .read_more_button .button_wrap.not_link .arrow{
+	transform: translateX(10px);
+}
+
+.section .read_more_button .button_wrap:not(.not_link):hover .text,
+.section .box a:hover .read_more_button .button_wrap.not_link .text{
+	color: #fff;
+}
+
+.section .read_more_button .button_wrap:not(.not_link):hover .arrow path,
+.section .box a:hover .read_more_button .button_wrap.not_link .arrow path{
+	fill: #fff;
+}
+
+.section .read_more_button.wh .button_wrap:not(.not_link):hover .text,
+.section .box a:hover .read_more_button.wh .button_wrap.not_link .text{
+	color: #000;
+}
+
+.section .read_more_button.wh .button_wrap:not(.not_link):hover .arrow path,
+.section .box a:hover .read_more_button.wh .button_wrap.not_link .arrow path{
+	fill: #000;
+}
+
+.section:not(.activeMotion) .read_more_button{
+	transform: translateY(40px);
+	opacity: 0;
+}
+
+
+@media (max-width: 768px) {
+	.section .read_more_button{
+		margin-top: 30px;
+	}
+	
+	.section .read_more_button.back_page_button .button_wrap .text{
+		font-size: 12px;
+		font-weight: 400;
+		font-family: 'Noto Sans TC';
+	}
+	
+	.section .read_more_button .button_wrap:not(.not_link):hover,
+	.section .box a:hover .read_more_button .button_wrap.not_link{
+		background-color: #fff;
+	}
+	
+	.section .read_more_button.wh .button_wrap:not(.not_link):hover,
+	.section .box a:hover .read_more_button.wh .button_wrap.not_link{
+		background-color: transparent;
+	}
+	
+	.section .read_more_button .button_wrap:not(.not_link):hover .arrow,
+	.section .box a:hover .read_more_button .button_wrap.not_link .arrow{
+		transform: translateX(0px);
+	}
+	
+	.section .read_more_button .button_wrap:not(.not_link):hover .text,
+	.section .box a:hover .read_more_button .button_wrap.not_link .text{
+		color: #000;
+	}
+	
+	.section .read_more_button .button_wrap:not(.not_link):hover .arrow path,
+	.section .box a:hover .read_more_button .button_wrap.not_link .arrow path{
+		fill: #000;
+	}
+	
+	.section .read_more_button.wh .button_wrap:not(.not_link):hover .text,
+	.section .box a:hover .read_more_button.wh .button_wrap.not_link .text{
+		color: #fff;
+	}
+	
+	.section .read_more_button.wh .button_wrap:not(.not_link):hover .arrow path,
+	.section .box a:hover .read_more_button.wh .button_wrap.not_link .arrow path{
+		fill: #fff;
+	}
+}
